@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | The Institute of Immigrant Education and Research (TIIER)</title>
+<meta name="description" content="TIIER is a regional hub for research and education projects in immigrant education at Rowan University's College of Education.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#1e7658; --green-dark:#145541; --gold:#ffbd59; --brown:#643e04;
+    --ink:#22302b; --muted:#5b6862; --cream:#fbf8f2; --line:#e6e0d4; --mint:#e9f3ef;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Source Sans 3","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px}
+  h1,h2,h3,.label{font-family:"Josefin Sans","Helvetica Neue",Arial,sans-serif}
+  a{color:var(--green)}
+  img{display:block;max-width:100%}
+
+  header{background:#fff;border-bottom:4px solid var(--gold);position:sticky;top:0;z-index:10}
+  .bar{max-width:1120px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .logo img{height:58px;width:auto}
+  nav a{font-family:"Josefin Sans",Arial,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.88rem;color:var(--green);text-decoration:none;margin-left:24px;padding-bottom:4px}
+  nav a.active{border-bottom:3px solid var(--brown)}
+
+  .hero{background:var(--green);color:#fff;position:relative;overflow:hidden;padding:84px 24px 96px}
+  .hero-inner{max-width:1120px;margin:0 auto;position:relative;z-index:1}
+  .label{text-transform:uppercase;letter-spacing:.2em;font-size:.82rem;font-weight:700;color:var(--gold);margin-bottom:16px}
+  .hero h1{font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.12;max-width:720px;font-weight:700}
+  .hero p{margin-top:22px;max-width:620px;font-size:1.2rem;opacity:.92}
+  .circles{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:420px;height:380px;opacity:.95}
+  .circles span{position:absolute;border-radius:50%;width:230px;height:230px}
+  .c1{background:var(--green-dark);top:0;left:80px}
+  .c2{background:var(--brown);top:130px;left:170px}
+  .c3{background:var(--gold);top:130px;left:0}
+  @media (max-width:900px){.circles{opacity:.18}}
+
+  main{max-width:1120px;margin:0 auto;padding:72px 24px 40px}
+  section{margin-bottom:76px}
+  h2{font-size:1.9rem;color:var(--green);line-height:1.2}
+  .rule{display:flex;gap:6px;margin:14px 0 26px}
+  .rule i{width:14px;height:14px;border-radius:50%}
+  .rule i:nth-child(1){background:var(--green)} .rule i:nth-child(2){background:var(--gold)} .rule i:nth-child(3){background:var(--brown)}
+  .lead{font-size:1.2rem;max-width:800px}
+  .lead + .lead{margin-top:16px}
+
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
+  .pillar{background:#fff;border:1px solid var(--line);border-top:5px solid var(--green);border-radius:6px;padding:24px}
+  .pillar:nth-child(2){border-top-color:var(--gold)}
+  .pillar:nth-child(3){border-top-color:var(--brown)}
+  .pillar h3{font-size:1.15rem;color:var(--ink);margin-bottom:8px}
+  .pillar p{color:var(--muted);font-size:.98rem}
+
+  .goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .goal{background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px}
+  .goal .dot{width:38px;height:38px;border-radius:50%;margin-bottom:14px}
+  .goal:nth-child(1) .dot{background:var(--green)} .goal:nth-child(2) .dot{background:var(--gold)}
+  .goal:nth-child(3) .dot{background:var(--brown)} .goal:nth-child(4) .dot{background:var(--green-dark)}
+  .goal h3{font-size:1.12rem;color:var(--green);margin-bottom:10px}
+  .goal ul{list-style:none}
+  .goal li{color:var(--muted);font-size:.97rem;padding-left:16px;position:relative;margin-bottom:6px}
+  .goal li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+
+  .people{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:26px}
+  .person{background:#fff;border:1px solid var(--line);border-radius:6px;padding:30px;display:flex;flex-direction:column}
+  .person-top{display:flex;align-items:center;gap:20px;margin-bottom:18px}
+  .person img{width:116px;height:116px;border-radius:50%;object-fit:cover;border:4px solid var(--gold);flex:0 0 116px}
+  .person:nth-child(2) img{border-color:var(--green)}
+  .person h3{font-size:1.3rem;color:var(--ink);line-height:1.25}
+  .role{font-weight:600;color:var(--green);font-size:.95rem;margin-top:4px}
+  .title{color:var(--muted);font-size:.92rem}
+  .person p.bio{color:var(--muted);font-size:.98rem}
+  .person p.bio + p.bio{margin-top:12px}
+  .person .email{margin-top:auto;padding-top:16px}
+  .person .email{margin-top:16px;font-weight:600;font-size:.95rem}
+
+  .involve{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .opp{border-radius:6px;padding:30px;color:#fff}
+  .opp.fellow{background:var(--green)}
+  .opp.faculty{background:var(--brown)}
+  .tag{display:inline-block;font-weight:600;font-size:.8rem;background:var(--gold);color:var(--brown);padding:4px 12px;border-radius:20px;margin-bottom:14px}
+  .opp h3{font-size:1.35rem;margin-bottom:10px}
+  .opp p{opacity:.92}
+  .opp ul{margin:14px 0 0 18px;opacity:.92}
+  .opp li{margin-bottom:5px}
+
+  .contact{background:var(--mint);border-radius:6px;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .contact h2{margin-bottom:6px}
+  .contact p{color:var(--muted)}
+  .contact .emails a{display:block;font-weight:600;font-size:1.05rem;margin:4px 0}
+
+  footer{background:var(--green-dark);color:#d6e6df;font-size:.9rem}
+  footer .bar{padding:26px 24px}
+  footer a{color:var(--gold)}
+  @media (max-width:640px){nav a{margin:0 18px 0 0}.logo img{height:46px}}
+  nav a{margin-left:18px;font-size:.8rem}
+  nav{display:flex;flex-wrap:wrap;row-gap:8px}
+  @media (max-width:900px){nav a{margin:0 14px 0 0}}
+  @media (max-width:640px){header{position:static}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="about.html"><img src="images/tiier-logo.png" alt="The Institute of Immigrant Education and Research (TIIER)"></a>
+    <nav>
+      <a href="about.html" class="active">About</a>
+      <a href="research.html">Research</a>
+      <a href="programs.html">Programs &amp; Events</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="people.html">People</a>
+      <a href="partners.html">Partners</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="circles" aria-hidden="true"><span class="c1"></span><span class="c2"></span><span class="c3"></span></div>
+  <div class="hero-inner">
+    <div class="label">About TIIER</div>
+    <h1>Bridging borders through research, education, and advocacy</h1>
+    <p>The Institute of Immigrant Education and Research is a new regional hub at Rowan University's College of Education, dedicated to transforming the landscape of immigrant education.</p>
+  </div>
+</div>
+
+<main>
+
+  <section>
+    <h2>Who We Are</h2>
+    <div class="rule"><i></i><i></i><i></i></div>
+    <p class="lead">TIIER supports collaborative research across local, national, and global institutions, publishes and shares research on immigrant education, and offers educational programming and learning opportunities for researchers, educators, and communities.</p>
+    <p class="lead">We work at the intersection of academic rigor and community empowerment, engaging education and policy stakeholders, advocating for immigrant communities, and building their capacity to enrich U.S. society.</p>
+    <div class="pillars">
+      <div class="pillar"><h3>Collaboration</h3><p>Building a bridge between local schools, organizations, and global research institutions to serve education and research needs.</p></div>
+      <div class="pillar"><h3>Dissemination</h3><p>Making sure immigrant education research doesn't stay in academic journals, but reaches the people who can use it for policy and practice.</p></div>
+      <div class="pillar"><h3>Innovation</h3><p>A space where policy stakeholders and educators co-design solutions for the future of education and the well-being of immigrant generations.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Strategic Goals</h2>
+    <div class="rule"><i></i><i></i><i></i></div>
+    <div class="goals">
+      <div class="goal"><div class="dot"></div><h3>Research &amp; Dissemination</h3>
+        <ul><li>Fostering collaborative research in immigrant education across local and global institutions</li><li>Digesting and disseminating critical research insights for policy and practice</li></ul></div>
+      <div class="goal"><div class="dot"></div><h3>Educational Programming</h3>
+        <ul><li>Creating workshops, training academies, and professional development for P-12 and non-profits</li><li>Offering unique learning opportunities for immigrant students and families</li></ul></div>
+      <div class="goal"><div class="dot"></div><h3>Advocacy &amp; Engagement</h3>
+        <ul><li>Engaging policy stakeholders to catalyze systemic change and innovation</li><li>Building capacity in immigrant communities to enrich U.S. society</li></ul></div>
+      <div class="goal"><div class="dot"></div><h3>Collaboration Ecosystem</h3>
+        <ul><li>Serving as a regional hub for local, national, and global research collaboration</li><li>Developing robust partnerships with higher education and companies</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Leadership</h2>
+    <div class="rule"><i></i><i></i><i></i></div>
+    <div class="people">
+      <div class="person">
+        <div class="person-top">
+          <img src="images/zeynep-isik-ercan.jpg" alt="Dr. Zeynep Isik-Ercan">
+          <div><h3>Dr. Zeynep Isik-Ercan</h3><div class="role">Co-Director</div><div class="title">Professor of Early Childhood Education</div></div>
+        </div>
+        <p class="bio">Zeynep Ercan is a Professor of Early Childhood Education, co-director of Early Childhood Leadership Institute, a professional development and research institute and co-director of the Institute of Immigrant Education and Research at Rowan University, New Jersey. She leads large scale research, training, and evaluation projects, writes for academic journals, and teaches and speaks on best practices for culturally and linguistically diverse children, teachers, families and communities, intellectual development, and professional development of educators and leaders. Zeynep&rsquo;s research has appeared in academic journals such as <em>Young Children</em>, <em>Race, Ethnicity and Education</em>, <em>Childhood Education</em>, <em>International Journal of Science Education</em>, <em>Early Childhood Education Journal</em>, and <em>Diaspora, Indigenous and Minority Education Journal</em>.</p>
+        <p class="bio">Zeynep is actively involved in local, national and global scale educational and social issues by consulting with international educational agencies, serving as the President of National Association for Early Childhood Teacher Educators, a founding board member of Society of North American Scholars, cofounder and cochair of Institute of Academic Excellence, a national academic mentoring program for first generation scholars, and as a board member, volunteer and donor for multiple non-profit and community organizations. She is the recipient of 2014 The Indiana Early Care and Education Award, 2017 Wall of Fame Award for Teaching/Advising at Rowan University, 2020 Excellence in Engagement Award at Rowan University, 2022 Outstanding Early Childhood Teacher Educator Award from New Jersey Association of Early Childhood Teacher Educators (NJAECTE) and 2024 Teamwork University award at Rowan University (as the Woman Alliance Network Board).</p>
+        <a class="email" href="mailto:ercan@rowan.edu">ercan@rowan.edu</a>
+      </div>
+      <div class="person">
+        <div class="person-top">
+          <img src="images/sunny-mcdevitt.jpg" alt="Dr. Seung Eun (Sunny) McDevitt">
+          <div><h3>Dr. Seung Eun (Sunny) McDevitt</h3><div class="role">Co-Director</div><div class="title">Associate Professor of Early Childhood Education</div></div>
+        </div>
+        <p class="bio">Seung Eun &ldquo;Sunny&rdquo; McDevitt is an Associate Professor of Early Childhood Education in the College of Education at Rowan University. Born in South Korea, she immigrated to the U.S. during her adolescent years. Her research focuses on understanding and supporting diverse teachers of color, particularly immigrant women of color and other minoritized teachers, and their inclusive pedagogies in early childhood and teacher education settings. She earned her doctorate in Curriculum and Teaching from Columbia University with a focus on early childhood education and teacher education. Dr. McDevitt&rsquo;s work is grounded in the principles of equity and inclusion and is significantly informed by the many years of working with young children, families, and teachers from marginalized immigrant communities in New York City as a teacher, early interventionist, and professional developer. She is a recipient of several grants from prestigious institutions such as the American Educational Research Association, the Mother Cabrini Health Foundation, and the European Educational Research Association. Additionally, she has published extensively in a wide range of journals, including <em>Teachers College Record</em>, <em>Teaching and Teacher Education</em>, and the <em>Journal of Research in Childhood Education</em>.</p>
+        <a class="email" href="mailto:mcdevitts@rowan.edu">mcdevitts@rowan.edu</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Get Involved</h2>
+    <div class="rule"><i></i><i></i><i></i></div>
+    <div class="involve">
+      <div class="opp fellow">
+        <span class="tag">1-year appointment · $1,000 stipend</span>
+        <h3>Virtual Institute Fellowship</h3>
+        <p>For faculty members and independent researchers. Fellows:</p>
+        <ul>
+          <li>Conduct collaborative research projects supported by the institute</li>
+          <li>Present research talks, lectures, or community education webinars</li>
+          <li>Provide specialized consultation for ongoing institute projects</li>
+          <li>Participate in evaluation activities and national conference proposals</li>
+        </ul>
+      </div>
+      <div class="opp faculty">
+        <span class="tag">3-year appointment · up to 10 members</span>
+        <h3>Affiliated Faculty Program</h3>
+        <p>Faculty from the College of Education and beyond can be invited to:</p>
+        <ul>
+          <li>Lead or collaborate on institute-supported research projects</li>
+          <li>Contribute to collaborative book projects and specialized trainings</li>
+          <li>Serve on the TIIER Advisory Council</li>
+          <li>Engage in grant development and long-term research planning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="contact">
+      <div>
+        <h2>Have ideas to collaborate on?</h2>
+        <p>Please connect with us.</p>
+      </div>
+      <div class="emails">
+        <a href="mailto:tiier@rowan.edu">tiier@rowan.edu</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="bar">
+    <div>&copy; 2026 The Institute of Immigrant Education and Research (TIIER) · Rowan University College of Education</div>
+    <div><a href="https://education.rowan.edu/centers-and-institutes/tiier.html">TIIER at Rowan</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

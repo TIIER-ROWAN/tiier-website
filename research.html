@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research | The Institute of Immigrant Education and Research (TIIER)</title>
+<meta name="description" content="Collaborative research on immigrant education from TIIER.">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#1e7658; --green-dark:#145541; --gold:#ffbd59; --brown:#643e04;
+    --ink:#22302b; --muted:#5b6862; --cream:#fbf8f2; --line:#e6e0d4; --mint:#e9f3ef;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Source Sans 3","Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.65;font-size:17px}
+  h1,h2,h3,.label{font-family:"Josefin Sans","Helvetica Neue",Arial,sans-serif}
+  a{color:var(--green)}
+  img{display:block;max-width:100%}
+
+  header{background:#fff;border-bottom:4px solid var(--gold);position:sticky;top:0;z-index:10}
+  .bar{max-width:1120px;margin:0 auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .logo img{height:58px;width:auto}
+  nav a{font-family:"Josefin Sans",Arial,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.88rem;color:var(--green);text-decoration:none;margin-left:24px;padding-bottom:4px}
+  nav a.active{border-bottom:3px solid var(--brown)}
+
+  .hero{background:var(--green);color:#fff;position:relative;overflow:hidden;padding:84px 24px 96px}
+  .hero-inner{max-width:1120px;margin:0 auto;position:relative;z-index:1}
+  .label{text-transform:uppercase;letter-spacing:.2em;font-size:.82rem;font-weight:700;color:var(--gold);margin-bottom:16px}
+  .hero h1{font-size:clamp(2rem,4.6vw,3.3rem);line-height:1.12;max-width:720px;font-weight:700}
+  .hero p{margin-top:22px;max-width:620px;font-size:1.2rem;opacity:.92}
+  .circles{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:420px;height:380px;opacity:.95}
+  .circles span{position:absolute;border-radius:50%;width:230px;height:230px}
+  .c1{background:var(--green-dark);top:0;left:80px}
+  .c2{background:var(--brown);top:130px;left:170px}
+  .c3{background:var(--gold);top:130px;left:0}
+  @media (max-width:900px){.circles{opacity:.18}}
+
+  main{max-width:1120px;margin:0 auto;padding:72px 24px 40px}
+  section{margin-bottom:76px}
+  h2{font-size:1.9rem;color:var(--green);line-height:1.2}
+  .rule{display:flex;gap:6px;margin:14px 0 26px}
+  .rule i{width:14px;height:14px;border-radius:50%}
+  .rule i:nth-child(1){background:var(--green)} .rule i:nth-child(2){background:var(--gold)} .rule i:nth-child(3){background:var(--brown)}
+  .lead{font-size:1.2rem;max-width:800px}
+  .lead + .lead{margin-top:16px}
+
+  .pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:30px}
+  .pillar{background:#fff;border:1px solid var(--line);border-top:5px solid var(--green);border-radius:6px;padding:24px}
+  .pillar:nth-child(2){border-top-color:var(--gold)}
+  .pillar:nth-child(3){border-top-color:var(--brown)}
+  .pillar h3{font-size:1.15rem;color:var(--ink);margin-bottom:8px}
+  .pillar p{color:var(--muted);font-size:.98rem}
+
+  .goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+  .goal{background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px}
+  .goal .dot{width:38px;height:38px;border-radius:50%;margin-bottom:14px}
+  .goal:nth-child(1) .dot{background:var(--green)} .goal:nth-child(2) .dot{background:var(--gold)}
+  .goal:nth-child(3) .dot{background:var(--brown)} .goal:nth-child(4) .dot{background:var(--green-dark)}
+  .goal h3{font-size:1.12rem;color:var(--green);margin-bottom:10px}
+  .goal ul{list-style:none}
+  .goal li{color:var(--muted);font-size:.97rem;padding-left:16px;position:relative;margin-bottom:6px}
+  .goal li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+
+  .people{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:26px}
+  .person{background:#fff;border:1px solid var(--line);border-radius:6px;padding:30px;display:flex;flex-direction:column}
+  .person-top{display:flex;align-items:center;gap:20px;margin-bottom:18px}
+  .person img{width:116px;height:116px;border-radius:50%;object-fit:cover;border:4px solid var(--gold);flex:0 0 116px}
+  .person:nth-child(2) img{border-color:var(--green)}
+  .person h3{font-size:1.3rem;color:var(--ink);line-height:1.25}
+  .role{font-weight:600;color:var(--green);font-size:.95rem;margin-top:4px}
+  .title{color:var(--muted);font-size:.92rem}
+  .person p.bio{color:var(--muted);font-size:.98rem;flex:1}
+  .person .email{margin-top:16px;font-weight:600;font-size:.95rem}
+
+  .involve{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+  .opp{border-radius:6px;padding:30px;color:#fff}
+  .opp.fellow{background:var(--green)}
+  .opp.faculty{background:var(--brown)}
+  .tag{display:inline-block;font-weight:600;font-size:.8rem;background:var(--gold);color:var(--brown);padding:4px 12px;border-radius:20px;margin-bottom:14px}
+  .opp h3{font-size:1.35rem;margin-bottom:10px}
+  .opp p{opacity:.92}
+  .opp ul{margin:14px 0 0 18px;opacity:.92}
+  .opp li{margin-bottom:5px}
+
+  .contact{background:var(--mint);border-radius:6px;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .contact h2{margin-bottom:6px}
+  .contact p{color:var(--muted)}
+  .contact .emails a{display:block;font-weight:600;font-size:1.05rem;margin:4px 0}
+
+  footer{background:var(--green-dark);color:#d6e6df;font-size:.9rem}
+  footer .bar{padding:26px 24px}
+  footer a{color:var(--gold)}
+  @media (max-width:640px){nav a{margin:0 18px 0 0}.logo img{height:46px}}
+
+  .ways{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+  .way{background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px}
+  .way .dot{width:38px;height:38px;border-radius:50%;margin-bottom:14px}
+  .way:nth-child(4n+1) .dot{background:var(--green)} .way:nth-child(4n+2) .dot{background:var(--gold)}
+  .way:nth-child(4n+3) .dot{background:var(--brown)} .way:nth-child(4n+4) .dot{background:var(--green-dark)}
+  .way h3{font-size:1.12rem;color:var(--green);margin-bottom:8px}
+  .way p{color:var(--muted);font-size:.97rem}
+  .who{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+  .who span{background:#fff;border:2px solid var(--green);color:var(--green);font-weight:600;padding:10px 18px;border-radius:30px}
+  .who span:nth-child(3n+2){border-color:var(--gold);color:var(--brown)}
+  .who span:nth-child(3n+3){border-color:var(--brown);color:var(--brown)}
+  .cta{background:var(--green);color:#fff;border-radius:6px;padding:48px 40px;text-align:center;position:relative;overflow:hidden}
+  .cta h2{color:#fff;font-size:2rem}
+  .cta p{max-width:640px;margin:14px auto 0;opacity:.92;font-size:1.1rem}
+  .cta .emails{margin-top:26px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+  .cta .emails a,.cta .emails .pending{background:var(--gold);color:var(--brown);font-weight:700;text-decoration:none;padding:12px 26px;border-radius:30px}
+  .cta .emails .pending{background:rgba(255,255,255,.15);color:#fff;border:2px dashed var(--gold);font-weight:600}
+
+  nav a{margin-left:18px;font-size:.8rem}
+  nav{display:flex;flex-wrap:wrap;row-gap:8px}
+  .soon{display:inline-block;font-weight:600;font-size:.75rem;background:var(--mint);color:var(--green);padding:3px 10px;border-radius:20px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em}
+  .way ul{list-style:none;margin-top:6px}
+  .way li{color:var(--muted);font-size:.97rem;padding-left:16px;position:relative;margin-bottom:6px}
+  .way li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  .q{background:#fff;border-left:5px solid var(--gold);border-radius:4px;padding:22px 26px;margin-bottom:14px}
+  .q h3{color:var(--green);font-size:1.05rem;margin-bottom:6px}
+  .q p{color:var(--muted);font-size:1.05rem;font-style:italic}
+  .placeholder{background:#fff;border:2px dashed var(--line);border-radius:6px;padding:34px;text-align:center;color:var(--muted)}
+  .placeholder h3{color:var(--green);margin-bottom:6px}
+  .timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+  @media (max-width:900px){nav a{margin:0 14px 0 0}}
+  @media (max-width:640px){header{position:static}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="about.html"><img src="images/tiier-logo.png" alt="The Institute of Immigrant Education and Research (TIIER)"></a>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="programs.html">Programs &amp; Events</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="people.html">People</a>
+      <a href="partners.html">Partners</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="circles" aria-hidden="true"><span class="c1"></span><span class="c2"></span><span class="c3"></span></div>
+  <div class="hero-inner">
+    <div class="label">Research</div>
+    <h1>Research that reaches policy and practice</h1>
+    <p>TIIER fosters collaborative research in immigrant education across local, national, and global institutions, and shares what we learn with the people who can put it to use.</p>
+  </div>
+</div>
+
+<main>
+  <section>
+    <h2>Our Research Focus</h2>
+    <div class="rule"><i></i><i></i><i></i></div>
+    <p class="lead">We digest and disseminate critical research insights for policy and practice, so that immigrant education research does not stay in academic journals.</p>
+  </section>
+  <section>
+    <h2>Projects in Development</h2>
+    <div class="rule"><i></i><i></i><i></i></div>
+    <div class="ways">
+      <div class="way"><div class="dot"></div><span class="soon">Planned</span><h3>Immigrant Career Opportunities</h3><p>A needs assessment and grant proposal focused on career opportunities and needs of immigrant communities.</p></div>
+      <div class="way"><div class="dot"></div><span class="soon">Planned</span><h3>Immigrant Leaders &amp; Organizers</h3><p>Research on immigrant leaders and community organizers and the roles they play in their communities.</p></div>
+      <div class="way"><div class="dot"></div><span class="soon">Planned</span><h3>Global Research Platform</h3><p>A collaboration platform connecting researchers across local, regional, and global institutions.</p></div>
+    </div>
+  </section>
+  <section>
+    <h2>Questions We're Exploring</h2>
+    <div class="rule"><i></i><i></i><i></i></div>
+    <div class="q"><h3>Community-Centered Initiatives</h3><p>What strategic research and service activities will most effectively empower regional immigrant communities?</p></div>
+    <div class="q"><h3>Organizational Alignment</h3><p>Which local and regional organizations offer the strongest potential for mission-critical partnerships?</p></div>
+    <div class="q"><h3>Leadership &amp; Advocacy Network</h3><p>How can TIIER identify and engage with influential regional leaders to catalyze systemic change in immigrant education?</p></div>
+  </section>
+  <section>
+    <h2>Publications</h2>
+    <div class="rule"><i></i><i></i><i></i></div>
+    <div class="ways">
+      <div class="way"><div class="dot"></div><span class="soon">Planned</span><h3>Edited Book</h3><p>A collection featuring 7–10 immigrant educator authors.</p></div>
+      <div class="way"><div class="dot"></div><span class="soon">Planned</span><h3>TIIER Book Series</h3><p>A book series growing out of our global research collaborations.</p></div>
+      <div class="way"><div class="dot"></div><span class="soon">Coming soon</span><h3>Research Briefs</h3><p>Short, practical summaries of research for educators and policymakers.</p></div>
+    </div>
+  </section>
+  <section>
+    <div class="cta">
+      <h2>Have ideas to collaborate on?</h2>
+      <p>We'd love to hear from you. Reach out to TIIER to start a conversation.</p>
+      <div class="emails">
+        <a href="mailto:tiier@rowan.edu">tiier@rowan.edu</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="bar">
+    <div>&copy; 2026 The Institute of Immigrant Education and Research (TIIER) · Rowan University College of Education</div>
+    <div><a href="https://education.rowan.edu/centers-and-institutes/tiier.html">TIIER at Rowan</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
